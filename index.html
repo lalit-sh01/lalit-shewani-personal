@@ -5,47 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lalit Shewani - Technical Product Manager</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav" id="nav">
+    <nav class="nav" id="navbar">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">Lalit Shewani</a>
+            <div class="nav-logo">
+                <span class="logo-text">LS</span>
+            </div>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#hero" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#newsletter" class="nav-link">Newsletter</a></li>
-                <li><a href="#ai-projects" class="nav-link">AI Projects</a></li>
-                <li><a href="#chatbot" class="nav-link">AI Resume</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
             </ul>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                <span class="theme-toggle-icon">🌙</span>
-            </button>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="container">
+    <section class="hero" id="home">
+        <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Lalit Shewani</h1>
-                    <h2 class="hero-subtitle">Techno-functional Product Manager @ JPMC | BITS Pilani | ISB PM Certified</h2>
-                    <p class="hero-location">📍 Bengaluru, Karnataka, India</p>
-                    <p class="hero-tagline">Driving technology transformation and solving complex business challenges in financial services</p>
+                    <h1 class="hero-title">
+                        <span class="title-main">Lalit Shewani</span>
+                        <span class="title-accent">Technical Product Manager</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transforming complex financial systems into scalable solutions. 
+                        7+ years at JPMorgan Chase building next-generation fintech platforms.
+                    </p>
                     <div class="hero-cta">
-                        <a href="#experience" class="btn btn--primary">View My Work</a>
-                        <a href="#contact" class="btn btn--outline">Connect with Me</a>
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#about" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="hero-placeholder">
-                        <div class="placeholder-avatar">👨‍💼</div>
-                        <p>Professional Photo</p>
+                <div class="hero-visual">
+                    <div class="profile-card glass-card">
+                        <div class="profile-placeholder">
+                            <div class="profile-icon">LS</div>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">7+</span>
+                                <span class="stat-label">Years</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">2M+</span>
+                                <span class="stat-label">Daily Transactions</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,30 +84,47 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Senior Product Manager turning complex business needs into scalable solutions</p>
+            </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-summary">Senior Product Manager with 7+ years of experience building financial technology platforms across post-trade systems, reconciliation, and data analytics. I specialize in turning complex business needs into scalable solutions by combining deep domain knowledge with strong technical intuition.</p>
-                    <p>My journey at JPMorgan Chase has taken me from Software Engineer to AVP Technical Product Manager, where I now lead strategic initiatives for core accounting platforms and drive technology transformation across the organization.</p>
+                    <p class="about-description">
+                        Senior Product Manager with 7+ years of experience building financial technology platforms 
+                        across post-trade systems, reconciliation, and data analytics. Skilled at turning complex 
+                        business needs into scalable solutions by combining domain knowledge with strong technical intuition.
+                    </p>
+                    <p class="about-description">
+                        Currently leading strategy and execution for core accounting platform initiatives at JPMorgan Chase, 
+                        guiding a 12-member agile team and delivering innovative solutions that reduce financial risk and 
+                        improve processing efficiency.
+                    </p>
                 </div>
                 <div class="about-stats">
-                    <div class="stat-card">
-                        <h3>7+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>AVP</h3>
-                        <p>Current Level</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>12+</h3>
-                        <p>Team Members Led</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>70%</h3>
-                        <p>Risk Reduction</p>
+                    <div class="stats-grid">
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">7+</span>
+                            <span class="stat-text">Years Experience</span>
+                            <span class="stat-desc">Financial Technology</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">12+</span>
+                            <span class="stat-text">Team Members Led</span>
+                            <span class="stat-desc">Agile Product Teams</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">70%</span>
+                            <span class="stat-text">Risk Reduction</span>
+                            <span class="stat-desc">Through Predictive Workflows</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">40%</span>
+                            <span class="stat-text">Processing Speed</span>
+                            <span class="stat-desc">Improvement Achieved</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,64 +132,74 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <section class="experience" id="experience">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">Building innovative solutions in financial technology</p>
+            </div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>AVP - Technical Product Manager</h3>
-                        <h4>JP Morgan Chase</h4>
-                        <p class="timeline-duration">January 2023 - Present</p>
-                        <p class="timeline-location">Bengaluru, Karnataka, India</p>
-                        <ul class="timeline-achievements">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="job-header">
+                            <h3 class="job-title">AVP - Technical Product Manager</h3>
+                            <span class="job-company">JP Morgan Chase</span>
+                            <span class="job-duration">January 2023 - Present</span>
+                        </div>
+                        <ul class="job-achievements">
                             <li>Led strategy and execution for core accounting platform initiatives, guiding a 12-member agile team</li>
-                            <li>Defined product vision and roadmap to streamline equities derivatives trade and valuations processing</li>
-                            <li>Built predictive data workflows to preempt control account breaks, reducing financial risk by 70%</li>
-                            <li>Delivered an AI chatbot for trade and valuation analysis, accelerating investigations from hours to minutes</li>
+                            <li>Built predictive data workflows reducing financial risk by 70% in 3 months</li>
+                            <li>Delivered an AI chatbot for trade analysis, accelerating investigations from hours to minutes</li>
+                            <li>Led strategic migration to event-driven architecture, improving processing speed by 40%</li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Technical Product Manager - Ripple Platform</h3>
-                        <h4>JP Morgan Chase</h4>
-                        <p class="timeline-duration">April 2024 - November 2024</p>
-                        <p class="timeline-location">Bengaluru, Karnataka, India</p>
-                        <ul class="timeline-achievements">
-                            <li>Drove product vision and strategy for Ripple, a platform designed to quantify technical project ROI</li>
-                            <li>Delivered Ripple MVP within 6 months, leading creation of data integration pipelines</li>
-                            <li>Secured initial adoption with 3 pilot teams and defined roadmap for long-term ROI analysis</li>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="job-header">
+                            <h3 class="job-title">Technical Product Manager - Ripple Platform</h3>
+                            <span class="job-company">JP Morgan Chase</span>
+                            <span class="job-duration">April 2024 - November 2024</span>
+                        </div>
+                        <ul class="job-achievements">
+                            <li>Drove product vision for Ripple platform to quantify technical project ROI</li>
+                            <li>Delivered MVP within 6 months with data integration pipelines and dashboards</li>
+                            <li>Secured initial adoption with 3 pilot teams and defined long-term roadmap</li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Associate - Technical PM</h3>
-                        <h4>JP Morgan Chase</h4>
-                        <p class="timeline-duration">January 2021 - January 2023</p>
-                        <p class="timeline-location">Mumbai, Maharashtra, India</p>
-                        <ul class="timeline-achievements">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="job-header">
+                            <h3 class="job-title">Associate - Technical PM</h3>
+                            <span class="job-company">JP Morgan Chase</span>
+                            <span class="job-duration">January 2021 - January 2023</span>
+                        </div>
+                        <ul class="job-achievements">
                             <li>Delivered real-time message system handling 150M+ daily messages</li>
-                            <li>Led 4 developers, coordinating cross-team to resolve user pain points on trading visibility</li>
-                            <li>Improved data availability and enabled faster downstream data analysis</li>
+                            <li>Led 4 developers in cross-team coordination for trading visibility improvements</li>
+                            <li>Modernized outbound accounting platform with real-time postings to 20+ consumers</li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Software Engineer II & I</h3>
-                        <h4>JP Morgan Chase</h4>
-                        <p class="timeline-duration">July 2018 - January 2021</p>
-                        <p class="timeline-location">Bengaluru, Karnataka, India</p>
-                        <ul class="timeline-achievements">
-                            <li>Developed high-availability engines for reliable trades and daily valuation processing</li>
-                            <li>Supported legacy system migration to modern protocols</li>
-                            <li>Maintained data consistency initiatives across trading systems</li>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="job-header">
+                            <h3 class="job-title">Software Engineer II & I</h3>
+                            <span class="job-company">JP Morgan Chase</span>
+                            <span class="job-duration">July 2018 - January 2021</span>
+                        </div>
+                        <ul class="job-achievements">
+                            <li>Developed high-availability Java microservices supporting 2M+ daily transactions</li>
+                            <li>Replatformed legacy C++ adapters to Java services, reducing operational risk</li>
+                            <li>Supported legacy system migration to modern protocols for data consistency</li>
                         </ul>
                     </div>
                 </div>
@@ -150,239 +208,170 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section class="skills" id="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-content">
-                <div class="skills-category">
-                    <h3>Technical Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">Product Lifecycle Management</div>
-                        <div class="skill-item">Agile & Scrum</div>
-                        <div class="skill-item">OKRs & KPI Tracking</div>
-                        <div class="skill-item">JIRA & Confluence</div>
-                        <div class="skill-item">AWS (EC2, Lambda, S3)</div>
-                        <div class="skill-item">SQL & Data Analytics</div>
-                        <div class="skill-item">Python & Machine Learning</div>
-                        <div class="skill-item">Microservices Architecture</div>
-                        <div class="skill-item">API Design</div>
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technical and leadership capabilities across product management</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category glass-card">
+                    <h3 class="category-title">Technical Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Product Lifecycle Management</span>
+                        <span class="skill-tag">Agile & Scrum</span>
+                        <span class="skill-tag">AWS Cloud Services</span>
+                        <span class="skill-tag">SQL & Data Analytics</span>
+                        <span class="skill-tag">Python & ML</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">API Design</span>
+                        <span class="skill-tag">Event-Driven Architecture</span>
                     </div>
                 </div>
-                <div class="skills-category">
-                    <h3>Leadership Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">Strategic Roadmaps</div>
-                        <div class="skill-item">Leadership</div>
-                        <div class="skill-item">Financial Management</div>
-                        <div class="skill-item">Cross-functional Collaboration</div>
-                        <div class="skill-item">Stakeholder Management</div>
+
+                <div class="skill-category glass-card">
+                    <h3 class="category-title">Product Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Product Strategy</span>
+                        <span class="skill-tag">User Story Writing</span>
+                        <span class="skill-tag">Market Research</span>
+                        <span class="skill-tag">A/B Testing</span>
+                        <span class="skill-tag">Stakeholder Management</span>
+                        <span class="skill-tag">Technical Documentation</span>
+                        <span class="skill-tag">Risk Assessment</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3 class="category-title">Leadership Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Strategic Planning</span>
+                        <span class="skill-tag">Financial Management</span>
+                        <span class="skill-tag">Cross-functional Collaboration</span>
+                        <span class="skill-tag">Change Management</span>
+                        <span class="skill-tag">Mentoring & Coaching</span>
+                        <span class="skill-tag">Problem Solving</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
+    <!-- Newsletter & AI Projects Section -->
+    <section class="projects" id="projects">
         <div class="container">
-            <h2 class="section-title">Education & Certifications</h2>
-            <div class="education-content">
-                <div class="education-section">
-                    <h3>Education</h3>
-                    <div class="education-grid">
-                        <div class="education-card">
-                            <h4>Bachelor of Engineering - Electronics & Electrical Engineering</h4>
-                            <p class="education-institution">BITS Pilani, Goa Campus</p>
-                            <p class="education-duration">2014 - 2018</p>
-                            <p class="education-minor">Minor: Finance</p>
-                        </div>
-                        <div class="education-card">
-                            <h4>Executive Certificate in Product Management</h4>
-                            <p class="education-institution">Indian School of Business</p>
-                            <p class="education-duration">2022</p>
-                        </div>
+            <div class="section-header">
+                <h2 class="section-title">Projects & Insights</h2>
+                <p class="section-subtitle">Sharing knowledge through technology insights and AI exploration</p>
+            </div>
+            
+            <div class="projects-content">
+                <div class="newsletter-section glass-card">
+                    <h3 class="project-title">Technology in Investment Banking</h3>
+                    <p class="project-description">
+                        Exploring the intersection of technology and finance through detailed analysis 
+                        of systems, data flows, and innovation in investment banking.
+                    </p>
+                    <div class="newsletter-signup">
+                        <input type="email" placeholder="Enter your email" class="email-input">
+                        <button class="btn btn-primary">Subscribe</button>
                     </div>
                 </div>
-                <div class="certifications-section">
-                    <h3>Certifications</h3>
-                    <div class="certifications-grid">
-                        <div class="certification-item">AWS Cloud Practitioner (2023)</div>
-                        <div class="certification-item">AI for Product Management</div>
-                        <div class="certification-item">Marketing Management</div>
-                        <div class="certification-item">Product Management Certificate Program</div>
-                        <div class="certification-item">AI For Everyone</div>
-                    </div>
-                </div>
-            </div>
-            <div class="achievements-section">
-                <h3>Achievements & Recognition</h3>
-                <ul class="achievements-list">
-                    <li>JPMC Markets Excellence Program Leadership Cohort (2025)</li>
-                    <li>Led ProdCon & Prodathon events engaging 500+ professionals</li>
-                    <li>Innovation Award Finalist, JP Morgan Chase Technology Innovation Awards (2024)</li>
-                    <li>Author of Technology in Investment Banking blog</li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
-    <!-- Newsletter Section -->
-    <section id="newsletter" class="newsletter">
-        <div class="container">
-            <h2 class="section-title">Technology in Investment Banking</h2>
-            <p class="newsletter-description">Deep dives on the systems, data flows, and tech behind global finance</p>
-            <div class="newsletter-content">
-                <div class="newsletter-signup">
-                    <h3>Subscribe to My Newsletter</h3>
-                    <form class="signup-form">
-                        <input type="email" placeholder="Enter your email" class="form-control">
-                        <button type="submit" class="btn btn--primary">Subscribe</button>
-                    </form>
-                </div>
-                <div class="blog-posts">
-                    <h3>Recent Posts</h3>
-                    <div class="posts-grid">
-                        <article class="post-card">
-                            <h4>Understanding Post-Trade Systems in Investment Banking</h4>
-                            <p>Exploring the complex world of trade settlement, clearing, and reconciliation systems...</p>
-                            <a href="#" class="read-more">Read More</a>
-                        </article>
-                        <article class="post-card">
-                            <h4>AI in Financial Risk Management</h4>
-                            <p>How artificial intelligence is transforming risk assessment and mitigation strategies...</p>
-                            <a href="#" class="read-more">Read More</a>
-                        </article>
-                        <article class="post-card">
-                            <h4>Building Scalable Data Pipelines for Trading Systems</h4>
-                            <p>Best practices for designing robust data infrastructure in high-frequency trading environments...</p>
-                            <a href="#" class="read-more">Read More</a>
-                        </article>
+                <div class="ai-projects glass-card">
+                    <h3 class="project-title">AI Learning Journey</h3>
+                    <p class="project-description">
+                        Building and learning AI applications in public, from trade analysis chatbots 
+                        to predictive workflows that reduce financial risk.
+                    </p>
+                    <div class="project-links">
+                        <a href="#chatbot" class="project-link">Resume Chatbot →</a>
+                        <a href="https://github.com/lalitshewani" target="_blank" class="project-link">GitHub Projects →</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- AI Projects Section -->
-    <section id="ai-projects" class="ai-projects">
-        <div class="container">
-            <h2 class="section-title">AI Learn in Public</h2>
-            <p class="section-description">My journey exploring artificial intelligence in product management and financial technology</p>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>AI-Powered Trade Analysis Chatbot</h3>
-                    <p>Built an intelligent chatbot for analyzing trading patterns and valuation discrepancies, reducing investigation time from hours to minutes.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">NLP</span>
-                        <span class="tag">Financial Data</span>
+            <!-- AI Resume Chatbot Section -->
+            <div class="chatbot-section glass-card" id="chatbot">
+                <h3 class="chatbot-title">AI Resume Chatbot</h3>
+                <p class="chatbot-description">
+                    Ask questions about my experience, skills, and projects. This AI assistant knows all about my professional journey.
+                </p>
+                <div class="chatbot-container">
+                    <iframe 
+                        src="about:blank" 
+                        class="chatbot-iframe"
+                        title="AI Resume Chatbot"
+                        frameborder="0">
+                    </iframe>
+                    <div class="chatbot-placeholder">
+                        <div class="placeholder-icon">🤖</div>
+                        <p>AI Chatbot will be loaded here</p>
+                        <p class="placeholder-subtext">Interactive resume assistant coming soon</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <h3>Predictive Risk Management Models</h3>
-                    <p>Developed machine learning models to predict control account breaks, achieving 70% reduction in financial risk exposure.</p>
-                    <div class="project-tags">
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Risk Analytics</span>
-                        <span class="tag">AWS</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>ROI Quantification Platform</h3>
-                    <p>Created Ripple platform using AI to measure and predict ROI for technical projects, enabling data-driven investment decisions.</p>
-                    <div class="project-tags">
-                        <span class="tag">Data Analytics</span>
-                        <span class="tag">Product Strategy</span>
-                        <span class="tag">Business Intelligence</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>AI for Product Management Learning Series</h3>
-                    <p>Comprehensive learning journey documenting the application of AI techniques in product management workflows and decision-making.</p>
-                    <div class="project-tags">
-                        <span class="tag">Education</span>
-                        <span class="tag">Product Management</span>
-                        <span class="tag">AI Applications</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Resume Chatbot Section -->
-    <section id="chatbot" class="chatbot-section">
-        <div class="container">
-            <h2 class="section-title">AI Resume Chatbot</h2>
-            <p class="section-description">Chat with my AI-powered resume to learn more about my experience and skills</p>
-            <div class="chatbot-container">
-                <div class="chatbot-instructions">
-                    <h3>How to Use</h3>
-                    <ul>
-                        <li>Ask about my work experience and achievements</li>
-                        <li>Inquire about specific technical skills or projects</li>
-                        <li>Get insights into my career progression and goals</li>
-                        <li>Learn about my approach to product management</li>
-                    </ul>
-                </div>
-                <div class="chatbot-iframe-container">
-                    <iframe src="https://lalit-shewani-my-ai-resume.hf.space" width="800" height="600" frameborder="0" ></iframe>
-					</div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Open to collaborations, opportunities, and meaningful conversations</p>
+            </div>
             <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <strong>Email:</strong>
-                        <a href="mailto:lalit.shewani01@gmail.com">lalit.shewani01@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Phone:</strong>
-                        <a href="tel:+919130723955">+91 9130723955</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>LinkedIn:</strong>
-                        <a href="https://www.linkedin.com/in/lalit-shewani" target="_blank">linkedin.com/in/lalit-shewani</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Location:</strong>
-                        <span>Bengaluru, Karnataka, India</span>
+                <div class="contact-info glass-card">
+                    <h3 class="contact-title">Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:lalit.shewani01@gmail.com" class="contact-link">lalit.shewani01@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+919130723955" class="contact-link">+91 9130723955</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/lalit-shewani" target="_blank" class="contact-link">linkedin.com/in/lalit-shewani</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Location</span>
+                            <span class="contact-text">Bengaluru, Karnataka, India</span>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <h3>Send a Message</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
+
+                <div class="contact-form glass-card">
+                    <h3 class="contact-title">Send a Message</h3>
+                    <form class="form">
+                        <div class="form-row">
+                            <input type="text" placeholder="Your Name" class="form-input">
+                            <input type="email" placeholder="Your Email" class="form-input">
                         </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                        <input type="text" placeholder="Subject" class="form-input">
+                        <textarea placeholder="Your Message" class="form-textarea" rows="5"></textarea>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Scroll to top button -->
-    <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">↑</button>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 Lalit Shewani. Building the future of financial technology.</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/lalit-shewani" target="_blank" class="footer-link">LinkedIn</a>
+                    <a href="mailto:lalit.shewani01@gmail.com" class="footer-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="app.js"></script>
 </body>
