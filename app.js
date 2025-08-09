@@ -1,378 +1,583 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lalit Shewani - Technical Product Manager</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="nav" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">LS</span>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="nav-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+// Sophisticated Personal Branding Website JavaScript
+// Author: Lalit Shewani
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="title-main">Lalit Shewani</span>
-                        <span class="title-accent">Technical Product Manager</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Transforming complex financial systems into scalable solutions. 
-                        7+ years at JPMorgan Chase building next-generation fintech platforms.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                        <a href="#about" class="btn btn-secondary">Learn More</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="profile-card glass-card">
-                        <div class="profile-placeholder">
-                            <div class="profile-icon">LS</div>
-                        </div>
-                        <div class="profile-stats">
-                            <div class="stat-item">
-                                <span class="stat-value">7+</span>
-                                <span class="stat-label">Years</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-value">2M+</span>
-                                <span class="stat-label">Daily Transactions</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+// DOM Content Loaded Event
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all functionality
+    initializeNavigation();
+    initializeScrollAnimations();
+    initializeFormHandlers();
+    initializeSmoothScrolling();
+    initializeActiveNavigation();
+    initializeLoadingAnimations();
+});
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Senior Product Manager turning complex business needs into scalable solutions</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-description">
-                        Senior Product Manager with 7+ years of experience building financial technology platforms 
-                        across post-trade systems, reconciliation, and data analytics. Skilled at turning complex 
-                        business needs into scalable solutions by combining domain knowledge with strong technical intuition.
-                    </p>
-                    <p class="about-description">
-                        Currently leading strategy and execution for core accounting platform initiatives at JPMorgan Chase, 
-                        guiding a 12-member agile team and delivering innovative solutions that reduce financial risk and 
-                        improve processing efficiency.
-                    </p>
-                </div>
-                <div class="about-stats">
-                    <div class="stats-grid">
-                        <div class="stat-card glass-card">
-                            <span class="stat-number">7+</span>
-                            <span class="stat-text">Years Experience</span>
-                            <span class="stat-desc">Financial Technology</span>
-                        </div>
-                        <div class="stat-card glass-card">
-                            <span class="stat-number">12+</span>
-                            <span class="stat-text">Team Members Led</span>
-                            <span class="stat-desc">Agile Product Teams</span>
-                        </div>
-                        <div class="stat-card glass-card">
-                            <span class="stat-number">70%</span>
-                            <span class="stat-text">Risk Reduction</span>
-                            <span class="stat-desc">Through Predictive Workflows</span>
-                        </div>
-                        <div class="stat-card glass-card">
-                            <span class="stat-number">40%</span>
-                            <span class="stat-text">Processing Speed</span>
-                            <span class="stat-desc">Improvement Achieved</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+// Navigation Functionality
+function initializeNavigation() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    <!-- Experience Section -->
-    <section class="experience" id="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Experience</h2>
-                <p class="section-subtitle">Building innovative solutions in financial technology</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="job-header">
-                            <h3 class="job-title">AVP - Technical Product Manager</h3>
-                            <span class="job-company">JP Morgan Chase</span>
-                            <span class="job-duration">January 2023 - Present</span>
-                        </div>
-                        <ul class="job-achievements">
-                            <li>Led strategy and execution for core accounting platform initiatives, guiding a 12-member agile team</li>
-                            <li>Built predictive data workflows reducing financial risk by 70% in 3 months</li>
-                            <li>Delivered an AI chatbot for trade analysis, accelerating investigations from hours to minutes</li>
-                            <li>Led strategic migration to event-driven architecture, improving processing speed by 40%</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="job-header">
-                            <h3 class="job-title">Technical Product Manager - Ripple Platform</h3>
-                            <span class="job-company">JP Morgan Chase</span>
-                            <span class="job-duration">April 2024 - November 2024</span>
-                        </div>
-                        <ul class="job-achievements">
-                            <li>Drove product vision for Ripple platform to quantify technical project ROI</li>
-                            <li>Delivered MVP within 6 months with data integration pipelines and dashboards</li>
-                            <li>Secured initial adoption with 3 pilot teams and defined long-term roadmap</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="job-header">
-                            <h3 class="job-title">Associate - Technical PM</h3>
-                            <span class="job-company">JP Morgan Chase</span>
-                            <span class="job-duration">January 2021 - January 2023</span>
-                        </div>
-                        <ul class="job-achievements">
-                            <li>Delivered real-time message system handling 150M+ daily messages</li>
-                            <li>Led 4 developers in cross-team coordination for trading visibility improvements</li>
-                            <li>Modernized outbound accounting platform with real-time postings to 20+ consumers</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="job-header">
-                            <h3 class="job-title">Software Engineer II & I</h3>
-                            <span class="job-company">JP Morgan Chase</span>
-                            <span class="job-duration">July 2018 - January 2021</span>
-                        </div>
-                        <ul class="job-achievements">
-                            <li>Developed high-availability Java microservices supporting 2M+ daily transactions</li>
-                            <li>Replatformed legacy C++ adapters to Java services, reducing operational risk</li>
-                            <li>Supported legacy system migration to modern protocols for data consistency</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Skills & Expertise</h2>
-                <p class="section-subtitle">Technical and leadership capabilities across product management</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category glass-card">
-                    <h3 class="category-title">Technical Skills</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">Product Lifecycle Management</span>
-                        <span class="skill-tag">Agile & Scrum</span>
-                        <span class="skill-tag">AWS Cloud Services</span>
-                        <span class="skill-tag">SQL & Data Analytics</span>
-                        <span class="skill-tag">Python & ML</span>
-                        <span class="skill-tag">Microservices</span>
-                        <span class="skill-tag">API Design</span>
-                        <span class="skill-tag">Event-Driven Architecture</span>
-                    </div>
-                </div>
-
-                <div class="skill-category glass-card">
-                    <h3 class="category-title">Product Skills</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">Product Strategy</span>
-                        <span class="skill-tag">User Story Writing</span>
-                        <span class="skill-tag">Market Research</span>
-                        <span class="skill-tag">A/B Testing</span>
-                        <span class="skill-tag">Stakeholder Management</span>
-                        <span class="skill-tag">Technical Documentation</span>
-                        <span class="skill-tag">Risk Assessment</span>
-                    </div>
-                </div>
-
-                <div class="skill-category glass-card">
-                    <h3 class="category-title">Leadership Skills</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">Team Leadership</span>
-                        <span class="skill-tag">Strategic Planning</span>
-                        <span class="skill-tag">Financial Management</span>
-                        <span class="skill-tag">Cross-functional Collaboration</span>
-                        <span class="skill-tag">Change Management</span>
-                        <span class="skill-tag">Mentoring & Coaching</span>
-                        <span class="skill-tag">Problem Solving</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter & AI Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Projects & Insights</h2>
-                <p class="section-subtitle">Sharing knowledge through technology insights and AI exploration</p>
-            </div>
+    // Mobile menu toggle
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
             
-            <div class="projects-content">
-                <div class="newsletter-section glass-card">
-                    <h3 class="project-title">Technology in Investment Banking</h3>
-                    <p class="project-description">
-                        Exploring the intersection of technology and finance through detailed analysis 
-                        of systems, data flows, and innovation in investment banking.
-                    </p>
-                    <div class="newsletter-signup">
-                        <input type="email" placeholder="Enter your email" class="email-input">
-                        <button class="btn btn-primary">Subscribe</button>
-                    </div>
-                </div>
+            // Prevent body scroll when menu is open
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
 
-                <div class="ai-projects glass-card">
-                    <h3 class="project-title">AI Learning Journey</h3>
-                    <p class="project-description">
-                        Building and learning AI applications in public, from trade analysis chatbots 
-                        to predictive workflows that reduce financial risk.
-                    </p>
-                    <div class="project-links">
-                        <a href="#chatbot" class="project-link">Resume Chatbot →</a>
-                        <a href="https://github.com/lalitshewani" target="_blank" class="project-link">GitHub Projects →</a>
-                    </div>
-                </div>
-            </div>
+    // Close mobile menu when clicking on nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (navMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
 
-            <!-- AI Resume Chatbot Section -->
-            <div class="chatbot-section glass-card" id="chatbot">
-                <h3 class="chatbot-title">AI Resume Chatbot</h3>
-                <p class="chatbot-description">
-                    Ask questions about my experience, skills, and projects. This AI assistant knows all about my professional journey.
-                </p>
-                <div class="chatbot-container">
-                    <iframe 
-                        src="about:blank" 
-                        class="chatbot-iframe"
-                        title="AI Resume Chatbot"
-                        frameborder="0">
-                    </iframe>
-                    <div class="chatbot-placeholder">
-                        <div class="placeholder-icon">🤖</div>
-                        <p>AI Chatbot will be loaded here</p>
-                        <p class="placeholder-subtext">Interactive resume assistant coming soon</p>
-                    </div>
-                </div>
-            </div>
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-container') && navMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Navbar background on scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.nav');
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(26, 26, 31, 0.95)';
+            navbar.style.backdropFilter = 'blur(20px)';
+        } else {
+            navbar.style.background = 'rgba(26, 26, 31, 0.9)';
+            navbar.style.backdropFilter = 'blur(20px)';
+        }
+    });
+}
+
+// Smooth Scrolling for Navigation Links
+function initializeSmoothScrolling() {
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const headerOffset = 80;
+                const elementPosition = targetSection.offsetTop;
+                const offsetPosition = elementPosition - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+// Active Navigation Highlighting
+function initializeActiveNavigation() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    function highlightNavigation() {
+        const scrollPosition = window.scrollY + 100;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', highlightNavigation);
+}
+
+// Scroll-triggered Animations using Intersection Observer
+function initializeScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.glass-card, .timeline-item, .stat-card, .skill-category');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-on-scroll');
+                setTimeout(() => {
+                    entry.target.classList.add('animated');
+                }, Math.random() * 300);
+            }
+        });
+    }, observerOptions);
+    
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+
+    // Hero section animation on load
+    setTimeout(() => {
+        const heroElements = document.querySelectorAll('.hero-title, .hero-subtitle, .hero-cta, .profile-card');
+        heroElements.forEach((element, index) => {
+            setTimeout(() => {
+                element.classList.add('fade-in-up');
+            }, index * 200);
+        });
+    }, 300);
+}
+
+// Form Handling
+function initializeFormHandlers() {
+    // Contact Form
+    const contactForm = document.querySelector('.contact-form .form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactFormSubmit);
+    }
+    
+    // Newsletter Signup
+    const newsletterForm = document.querySelector('.newsletter-signup');
+    if (newsletterForm) {
+        const newsletterBtn = newsletterForm.querySelector('.btn-primary');
+        const emailInput = newsletterForm.querySelector('.email-input');
+        
+        if (newsletterBtn && emailInput) {
+            newsletterBtn.addEventListener('click', handleNewsletterSignup);
+            emailInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    handleNewsletterSignup(e);
+                }
+            });
+        }
+    }
+}
+
+// Contact Form Submit Handler
+function handleContactFormSubmit(e) {
+    e.preventDefault();
+    
+    const submitButton = e.target.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    
+    // Show loading state
+    submitButton.textContent = 'Sending...';
+    submitButton.disabled = true;
+    submitButton.classList.add('loading');
+    
+    // Simulate form submission (replace with actual API call)
+    setTimeout(() => {
+        // Show success message
+        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+        
+        // Reset form
+        e.target.reset();
+        
+        // Reset button
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+        submitButton.classList.remove('loading');
+    }, 2000);
+}
+
+// Newsletter Signup Handler
+function handleNewsletterSignup(e) {
+    e.preventDefault();
+    
+    const emailInput = document.querySelector('.newsletter-signup .email-input');
+    const button = e.target.closest('.btn-primary') || e.target;
+    const email = emailInput.value.trim();
+    
+    if (!email) {
+        showNotification('Please enter your email address.', 'error');
+        return;
+    }
+    
+    if (!isValidEmail(email)) {
+        showNotification('Please enter a valid email address.', 'error');
+        return;
+    }
+    
+    const originalText = button.textContent;
+    
+    // Show loading state
+    button.textContent = 'Subscribing...';
+    button.disabled = true;
+    button.classList.add('loading');
+    
+    // Simulate API call
+    setTimeout(() => {
+        showNotification('Successfully subscribed to newsletter!', 'success');
+        emailInput.value = '';
+        
+        // Reset button
+        button.textContent = originalText;
+        button.disabled = false;
+        button.classList.remove('loading');
+    }, 1500);
+}
+
+// Email Validation
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Notification System
+function showNotification(message, type = 'info') {
+    // Remove existing notifications
+    const existingNotifications = document.querySelectorAll('.notification');
+    existingNotifications.forEach(notification => notification.remove());
+    
+    const notification = document.createElement('div');
+    notification.className = `notification notification--${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <span class="notification-message">${message}</span>
+            <button class="notification-close" onclick="this.parentElement.parentElement.remove()">×</button>
         </div>
-    </section>
+    `;
+    
+    // Add notification styles
+    const style = document.createElement('style');
+    style.textContent = `
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: rgba(26, 26, 31, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            z-index: 10000;
+            max-width: 400px;
+            transform: translateX(450px);
+            transition: transform 0.3s ease;
+            border-left: 4px solid var(--accent-cyan);
+        }
+        
+        .notification--success {
+            border-left-color: #10B981;
+        }
+        
+        .notification--error {
+            border-left-color: #F59E0B;
+        }
+        
+        .notification-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        
+        .notification-message {
+            color: #F8F9FA;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .notification-close {
+            background: none;
+            border: none;
+            color: #8B8B8B;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+        
+        .notification-close:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #F8F9FA;
+        }
+    `;
+    
+    if (!document.querySelector('style[data-notification-styles]')) {
+        style.setAttribute('data-notification-styles', 'true');
+        document.head.appendChild(style);
+    }
+    
+    document.body.appendChild(notification);
+    
+    // Trigger animation
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        if (document.body.contains(notification)) {
+            notification.style.transform = 'translateX(450px)';
+            setTimeout(() => {
+                if (document.body.contains(notification)) {
+                    notification.remove();
+                }
+            }, 300);
+        }
+    }, 5000);
+}
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="section-subtitle">Open to collaborations, opportunities, and meaningful conversations</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info glass-card">
-                    <h3 class="contact-title">Get In Touch</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span class="contact-label">Email</span>
-                            <a href="mailto:lalit.shewani01@gmail.com" class="contact-link">lalit.shewani01@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">Phone</span>
-                            <a href="tel:+919130723955" class="contact-link">+91 9130723955</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">LinkedIn</span>
-                            <a href="https://www.linkedin.com/in/lalit-shewani" target="_blank" class="contact-link">linkedin.com/in/lalit-shewani</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">Location</span>
-                            <span class="contact-text">Bengaluru, Karnataka, India</span>
-                        </div>
-                    </div>
-                </div>
+// Loading Animations for Interactive Elements
+function initializeLoadingAnimations() {
+    // Add hover effects to skill tags
+    const skillTags = document.querySelectorAll('.skill-tag');
+    skillTags.forEach(tag => {
+        tag.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px) scale(1.05)';
+        });
+        
+        tag.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+    
+    // Add click effects to buttons
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Create ripple effect
+            const ripple = document.createElement('span');
+            ripple.className = 'ripple';
+            
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = (event.clientX - rect.left - size / 2) + 'px';
+            ripple.style.top = (event.clientY - rect.top - size / 2) + 'px';
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 1000);
+        });
+    });
+    
+    // Add ripple effect styles
+    const rippleStyle = document.createElement('style');
+    rippleStyle.textContent = `
+        .btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+        
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    `;
+    
+    if (!document.querySelector('style[data-ripple-styles]')) {
+        rippleStyle.setAttribute('data-ripple-styles', 'true');
+        document.head.appendChild(rippleStyle);
+    }
+}
 
-                <div class="contact-form glass-card">
-                    <h3 class="contact-title">Send a Message</h3>
-                    <form class="form">
-                        <div class="form-row">
-                            <input type="text" placeholder="Your Name" class="form-input">
-                            <input type="email" placeholder="Your Email" class="form-input">
-                        </div>
-                        <input type="text" placeholder="Subject" class="form-input">
-                        <textarea placeholder="Your Message" class="form-textarea" rows="5"></textarea>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+// Parallax Effect for Hero Section
+function initializeParallax() {
+    const heroSection = document.querySelector('.hero');
+    
+    if (heroSection) {
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = heroSection.querySelectorAll('.profile-card');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = (index + 1) * 0.1;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+    }
+}
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">© 2025 Lalit Shewani. Building the future of financial technology.</p>
-                <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/lalit-shewani" target="_blank" class="footer-link">LinkedIn</a>
-                    <a href="mailto:lalit.shewani01@gmail.com" class="footer-link">Email</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+// Typing Animation for Hero Title
+function initializeTypingAnimation() {
+    const titleElement = document.querySelector('.title-accent');
+    if (!titleElement) return;
+    
+    const originalText = titleElement.textContent;
+    const roles = [
+        'Technical Product Manager',
+        'Financial Technology Expert',
+        'AI Innovation Leader',
+        'Product Strategy Specialist'
+    ];
+    
+    let currentRoleIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+    
+    function typeAnimation() {
+        const currentRole = roles[currentRoleIndex];
+        
+        if (isDeleting) {
+            titleElement.textContent = currentRole.substring(0, currentCharIndex - 1);
+            currentCharIndex--;
+        } else {
+            titleElement.textContent = currentRole.substring(0, currentCharIndex + 1);
+            currentCharIndex++;
+        }
+        
+        let typeSpeed = isDeleting ? 100 : 150;
+        
+        if (!isDeleting && currentCharIndex === currentRole.length) {
+            typeSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && currentCharIndex === 0) {
+            isDeleting = false;
+            currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+            typeSpeed = 500;
+        }
+        
+        setTimeout(typeAnimation, typeSpeed);
+    }
+    
+    // Start typing animation after page load
+    setTimeout(() => {
+        titleElement.textContent = '';
+        typeAnimation();
+    }, 2000);
+}
 
-    <script src="app.js"></script>
-</body>
-</html>
+// Performance Optimization
+function optimizePerformance() {
+    // Debounce scroll events
+    let scrollTimeout;
+    const originalScrollHandler = window.onscroll;
+    
+    window.addEventListener('scroll', function() {
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
+        }
+        
+        scrollTimeout = setTimeout(function() {
+            if (originalScrollHandler) {
+                originalScrollHandler();
+            }
+        }, 10);
+    });
+    
+    // Lazy load images if any are added
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+}
+
+// Initialize additional features
+document.addEventListener('DOMContentLoaded', function() {
+    // initializeParallax(); // Uncomment if you want parallax effects
+    // initializeTypingAnimation(); // Uncomment if you want typing animation
+    optimizePerformance();
+});
+
+// Accessibility Enhancements
+function initializeAccessibility() {
+    // Add keyboard navigation for custom elements
+    const interactiveElements = document.querySelectorAll('.skill-tag, .stat-card, .timeline-content');
+    
+    interactiveElements.forEach(element => {
+        element.setAttribute('tabindex', '0');
+        
+        element.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    });
+    
+    // Focus management for mobile menu
+    const mobileMenuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    }
+}
+
+// Error Handling
+window.addEventListener('error', function(e) {
+    console.error('JavaScript Error:', e.error);
+    
+    // Optional: Show user-friendly error message
+    if (e.error && e.error.message) {
+        showNotification('Something went wrong. Please refresh the page.', 'error');
+    }
+});
+
+// Initialize accessibility features
+document.addEventListener('DOMContentLoaded', initializeAccessibility);
+
+// Export functions for testing (if needed)
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        isValidEmail,
+        showNotification,
+        initializeNavigation,
+        initializeScrollAnimations,
+        initializeFormHandlers
+    };
+}
