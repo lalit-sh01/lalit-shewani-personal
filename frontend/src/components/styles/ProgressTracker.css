@@ -1,0 +1,126 @@
+.progress-tracker {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.progress-tracker.circular .progress-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+
+.progress-circle {
+  width: 100%;
+  height: 100%;
+}
+
+.progress-circle .progress-background {
+  fill: none;
+  stroke: #e2e8f0;
+  stroke-width: 5;
+}
+
+.progress-circle .progress-fill {
+  fill: none;
+  stroke: url(#gradient);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transform: rotate(-90deg);
+  transform-origin: 50px 50px;
+  transition: stroke-dashoffset 0.35s;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.progress-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.progress-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.progress-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.progress-tracker.linear {
+  padding: 2rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.progress-header h3 {
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.progress-percentage {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.progress-bar-container {
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat .stat-label {
+  display: block;
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat .stat-value {
+  display: block;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .progress-stats {
+    grid-template-columns: 1fr;
+  }
+}

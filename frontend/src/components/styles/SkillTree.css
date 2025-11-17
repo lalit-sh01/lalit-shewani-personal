@@ -1,0 +1,342 @@
+.skill-tree-widget,
+.skill-tree-panel,
+.skill-tree-fullwidth {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.widget-header {
+  margin-bottom: 1.5rem;
+}
+
+.widget-header h3 {
+  font-size: 1.2rem;
+  color: #1e293b;
+}
+
+.skill-stats {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.stat-circle {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+}
+
+.stat-circle svg {
+  width: 100%;
+  height: 100%;
+}
+
+.stat-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  flex: 1;
+}
+
+.stat-item {
+  padding: 1rem;
+  background: #f0f4ff;
+  border-radius: 6px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  display: block;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.panel-header {
+  margin-bottom: 1.5rem;
+}
+
+.panel-header h3 {
+  color: #1e293b;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.panel-header p {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.tree-visualization {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skill-node {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.skill-node.unlocked {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.skill-node.unlocked:hover {
+  border-color: #764ba2;
+  background: rgba(102, 126, 234, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.skill-node.mastered {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.skill-node.mastered:hover {
+  border-color: #059669;
+  background: rgba(16, 185, 129, 0.1);
+  transform: translateY(-4px);
+}
+
+.skill-node.locked {
+  border-color: #cbd5e1;
+  background: #f1f5f9;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.skill-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  display: block;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.skill-details-panel {
+  padding: 1.5rem;
+  background: #f0f4ff;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.skill-details-panel h4 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.skill-progress {
+  margin-bottom: 1rem;
+}
+
+.skill-progress span {
+  display: block;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background: rgba(102, 126, 234, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #667eea;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.skill-locked {
+  background: rgba(239, 68, 68, 0.05);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.skill-locked p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.skill-locked p:first-child {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* FullWidth Mode */
+.skill-tree-fullwidth {
+  width: 100%;
+}
+
+.tree-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.tree-header h2 {
+  font-size: 1.5rem;
+  color: #1e293b;
+}
+
+.view-switcher {
+  display: flex;
+  gap: 0.5rem;
+  background: #e2e8f0;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.view-switcher button {
+  background: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.view-switcher button.active {
+  background: #667eea;
+  color: white;
+}
+
+.tree-content {
+  padding: 2rem 0;
+}
+
+.skill-list {
+  overflow-x: auto;
+}
+
+.skill-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.skill-table thead {
+  background: #f0f4ff;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.skill-table th {
+  text-align: left;
+  padding: 1rem;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.skill-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.skill-table tr:hover {
+  background: #f8fafc;
+}
+
+.skill-table tr.selected {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.skill-icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-badge.mastered {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.status-badge.unlocked {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}
+
+.status-badge.locked {
+  background: rgba(203, 213, 225, 0.3);
+  color: #64748b;
+}
+
+.progress-bar-mini {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .skill-tree-widget .skill-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-details {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .tree-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .tree-visualization {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .skill-table {
+    font-size: 0.85rem;
+  }
+
+  .skill-table th,
+  .skill-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
